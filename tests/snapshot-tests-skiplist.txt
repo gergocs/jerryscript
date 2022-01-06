@@ -4,6 +4,7 @@ tests/jerry/bigint6.js
 tests/jerry/bigint7.js
 tests/jerry/bigint8.js
 tests/jerry/bigint9.js
+tests/jerry/atomics.js
 tests/jerry/logical-assignment.js
 tests/jerry/module-circular-01.mjs
 tests/jerry/module-circular-02.mjs
