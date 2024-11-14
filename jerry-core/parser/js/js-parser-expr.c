@@ -2525,6 +2525,7 @@ parser_form_call_reference (parser_context_t *context_p) /**< context */
   parser_call_reference_t desc;
   desc.status_flags = PARSER_CALL_REFERENCE_NONE;
   desc.opcode = CBC_CALL;
+  desc.call_arguments = 0;
 
   if (context_p->stack_top_uint8 == LEXER_KEYW_NEW)
   {
@@ -3741,6 +3742,11 @@ parser_pattern_get_target (parser_context_t *context_p, /**< context */
                            parser_pattern_flags_t flags) /**< flags */
 {
   parser_pattern_end_marker_t end_marker;
+  scanner_location_t location;
+  location.column = 0;
+  location.line = 0;
+  location.source_p = NULL;
+  end_marker.location = location;
   end_marker.token.type = LEXER_INVALID_PATTERN;
   parser_branch_t skip_init;
 
